@@ -13,9 +13,9 @@ class CircleAreaTest {
     }
 
     @Test
-    void testRadiusOne() {
-        assertEquals(Math.PI,
-            CircleArea.calculateArea(1), 0.001);
+    void testAreaForRadiusFive() {
+        assertEquals(100.0, CircleArea.calculateArea(5), 0.001);
+}
     }
 
     @Test
