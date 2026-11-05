@@ -28,3 +28,12 @@ jobs:
 
       - name: Build Docker Image
         run: docker build -t circle-area-ci:latest .
+
+      - name: Save Docker Image
+        run: docker save -o circle-area-ci.tar circle-area-ci:latest
+
+      - name: Upload Docker Image
+        uses: actions/upload-artifact@v4
+        with:
+          name: circle-area-docker-image
+          path: circle-area-ci.tar
